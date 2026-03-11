@@ -5,7 +5,8 @@ FastAPI 应用入口
 """
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from core.api.routes import router
+from core.api.routes import router as paper_router
+from core.api.topic_routes import router as topic_router
 
 
 # 创建应用
@@ -15,6 +16,7 @@ app = FastAPI(
     功能
     
     - 论文查询和管理
+    - 主题发现和分析
     - 智能搜索
     - 统计分析
     
@@ -23,6 +25,7 @@ app = FastAPI(
     1. 查看 /docs 获取完整文档
     2. 使用 /api/papers 获取论文列表
     3. 使用 /api/papers/search 搜索论文
+    4. 使用 /api/topics 查看主题分类
     """,
     version="1.0.0"
 )
@@ -37,7 +40,8 @@ app.add_middleware(
 )
 
 # 注册路由
-app.include_router(router)
+app.include_router(paper_router)
+app.include_router(topic_router)
 
 
 # 根路径
@@ -55,7 +59,8 @@ def read_root():
         "endpoints": {
             "papers": "/api/papers",
             "search": "/api/papers/search",
-            "stats": "/api/stats"
+            "stats": "/api/stats",
+            "topics": "/api/topics"
         }
     }
 

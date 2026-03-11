@@ -107,3 +107,78 @@ class ErrorResponse(BaseModel):
                 "message":"Paper not found"
             }
         }
+
+
+class TopicKeyword(BaseModel):
+    """
+    主题关键词模型
+    """
+    word: str = Field(..., description="关键词")
+    score: float = Field(..., ge=0.0, le=1.0, description="关键词得分")
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "word": "transformer",
+                "score": 0.85
+            }
+        }
+
+
+class TopicResponse(BaseModel):
+    """
+    主题响应模型
+    """
+    topic_id: int = Field(..., description="主题ID")
+    topic_name: str = Field(..., description="主题名称")
+    keywords: List[TopicKeyword] = Field(..., description="关键词列表")
+    paper_count: int = Field(..., ge=0, description="论文数量")
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "topic_id": 0,
+                "topic_name": "transformer_attention_model",
+                "keywords": [
+                    {"word": "transformer", "score": 0.85},
+                    {"word": "attention", "score": 0.78},
+                    {"word": "model", "score": 0.72}
+                ],
+                "paper_count": 45
+            }
+        }
+
+
+class TopicListResponse(BaseModel):
+    """
+    主题列表响应模型
+    """
+    total: int = Field(..., description="主题总数")
+    topics: List[TopicResponse] = Field(..., description="主题列表")
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "total": 2,
+                "topics": [
+                    {
+                        "topic_id": 0,
+                        "topic_name": "transformer_attention_model",
+                        "keywords": [
+                            {"word": "transformer", "score": 0.85},
+                            {"word": "attention", "score": 0.78}
+                        ],
+                        "paper_count": 45
+                    },
+                    {
+                        "topic_id": 1,
+                        "topic_name": "neural_network_learning",
+                        "keywords": [
+                            {"word": "neural", "score": 0.82},
+                            {"word": "network", "score": 0.75}
+                        ],
+                        "paper_count": 38
+                    }
+                ]
+            }
+        }

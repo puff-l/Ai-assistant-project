@@ -5,7 +5,7 @@ import sys
 # 添加父目录到路径
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from core.nlp.topic_modeling import train_topic_model_for_papers
+from src.core.nlp.topic_modeling import train_topic_model_for_papers
 
 
 def main():

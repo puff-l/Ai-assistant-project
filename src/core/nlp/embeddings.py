@@ -1,4 +1,8 @@
 from __future__ import annotations
+import os
+# 使用 Hugging Face 镜像站
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+
 from sentence_transformers import SentenceTransformer
 import pandas as pd
 import numpy as np

@@ -1,0 +1,41 @@
+{
+  "total": 2,
+  "topics": [
+    {
+      "topic_id": 0,
+      "topic_name": "medical_imaging_diagnosis",
+      "keywords": [
+        {
+          "word": "medical",
+          "score": 0.85
+        },
+        {
+          "word": "imaging",
+          "score": 0.72
+        },
+        {
+          "word": "diagnosis",
+          "score": 0.68
+        }
+      ],
+      "paper_count": 2,
+      "description": "Focus on medical imaging and diagnosis"
+    },
+    {
+      "topic_id": 1,
+      "topic_name": "drug_discovery_molecular",
+      "keywords": [
+        {
+          "word": "drug",
+          "score": 0.82
+        },
+        {
+          "word": "discovery",
+          "score": 0.75
+        }
+      ],
+      "paper_count": 0,
+      "description": "Molecular drug discovery and related topics"
+    }
+  ]
+}

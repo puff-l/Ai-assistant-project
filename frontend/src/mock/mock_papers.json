@@ -1,0 +1,32 @@
+[
+  {
+    "id": "2301.00001",
+    "title": "Deep Learning for Medical Imaging",
+    "abstract": "This paper discusses deep learning techniques applied to medical imaging.",
+    "authors": [
+      "Alice Smith"
+    ],
+    "published": "2023-01-01T00:00:00",
+    "pdf_url": "https://arxiv.org/pdf/2301.00001.pdf",
+    "categories": [
+      "cs.CV"
+    ],
+    "topic_id": 0,
+    "topic_name": "medical_imaging_diagnosis"
+  },
+  {
+    "id": "2302.00050",
+    "title": "AI-Assisted Diagnosis in Radiology",
+    "abstract": "Applications of AI for radiology diagnostics and workflow.",
+    "authors": [
+      "Bob Johnson"
+    ],
+    "published": "2023-02-15T00:00:00",
+    "pdf_url": "https://arxiv.org/pdf/2302.00050.pdf",
+    "categories": [
+      "cs.CV"
+    ],
+    "topic_id": 0,
+    "topic_name": "medical_imaging_diagnosis"
+  }
+]

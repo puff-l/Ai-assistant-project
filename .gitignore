@@ -1,3 +1,12 @@
+
+# ============================================
+# Python 基础配置
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+=======
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -7,6 +16,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+
 .Python
 build/
 develop-eggs/
@@ -20,6 +30,92 @@ parts/
 sdist/
 var/
 wheels/
+<<<<<<< HEAD
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ============================================
+# 虚拟环境
+# ============================================
+.venv/
+venv/
+ENV/
+env/
+literature_review/
+
+# ============================================
+# IDE 配置
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================
+# 数据文件（只保留目录结构）
+# ============================================
+# 忽略所有数据文件
+data/raw/*
+data/processed/*
+data/chroma/*
+
+# 但保留 .gitkeep 文件以维持目录结构
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/chroma/.gitkeep
+
+# ============================================
+# 模型文件（只保留目录结构）
+# ============================================
+# 忽略所有模型文件
+models/*
+models/sentence_transformers/*
+
+# 但保留 .gitkeep 文件
+!models/.gitkeep
+!models/sentence_transformers/.gitkeep
+
+# ============================================
+# 文档和教程（不上传）
+# ============================================
+# docs/  # 已改为追踪docs目录
+tutorial/
+
+# ============================================
+# 环境配置
+# ============================================
+.env
+
+# ============================================
+# Jupyter Notebooks
+# ============================================
+.ipynb_checkpoints/
+notebooks/
+
+# ============================================
+# 日志文件
+# ============================================
+*.log
+
+# ============================================
+# 操作系统
+# ============================================
+.DS_Store
+Thumbs.db
+
+# ============================================
+# 临时文件和测试输出
+# ============================================
+*.tmp
+*.bak
+test_output/
+
+项目剩余工作分工方案.md
+LiteratureReview_AIAssistant.zip
+data/embeddings/transformer_embeddings.npy
+=======
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -205,3 +301,4 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+>>>>>>> upstream/main
